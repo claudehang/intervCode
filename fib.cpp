@@ -24,9 +24,7 @@ int fib_recur(int n, std::vector<int>& memo) {
     // be careful the subscript of vector for number n is actually n - 1
     if (memo[n - 1] != -1) return memo[n - 1];
     if (n <= 2) f = 1;
-    else {
-        f = fib_recur(n - 1, memo) + fib_recur(n - 2, memo);
-    }
+    else f = fib_recur(n - 1, memo) + fib_recur(n - 2, memo);
     memo[n - 1] = f;
     return f;
 }
